@@ -100,5 +100,22 @@
       "buffer_size": 20000,
       "description": "Noisy small batch"
     }
+  },
+  {
+    "experiment": 7,
+    "mean_reward": -13.666666666666666,
+    "std_reward": 3.2998316455372216,
+    "model_path": "cyiza_results\\exp_7\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.0005,
+      "gamma": 0.99,
+      "batch_size": 64,
+      "eps_start": 1.0,
+      "eps_end": 0.01,
+      "eps_decay": 2000000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "Long exploration slow decay"
+    }
   }
 ]
