@@ -1,0 +1,104 @@
+[
+  {
+    "experiment": 1,
+    "mean_reward": -2.3333333333333335,
+    "std_reward": 0.9428090415820634,
+    "model_path": "cyiza_results\\exp_1\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.0008,
+      "gamma": 0.9,
+      "batch_size": 64,
+      "eps_start": 1.0,
+      "eps_end": 0.02,
+      "eps_decay": 50000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "Aggressive learner"
+    }
+  },
+  {
+    "experiment": 2,
+    "mean_reward": -12.333333333333334,
+    "std_reward": 12.552113589175152,
+    "model_path": "cyiza_results\\exp_2\\final_model.zip",
+    "hyperparameters": {
+      "lr": 5e-06,
+      "gamma": 0.999,
+      "batch_size": 32,
+      "eps_start": 1.0,
+      "eps_end": 0.05,
+      "eps_decay": 800000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "Conservative slow learner"
+    }
+  },
+  {
+    "experiment": 3,
+    "mean_reward": -16.333333333333332,
+    "std_reward": 2.3570226039551585,
+    "model_path": "cyiza_results\\exp_3\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.0003,
+      "gamma": 0.98,
+      "batch_size": 64,
+      "eps_start": 1.0,
+      "eps_end": 0.2,
+      "eps_decay": 100000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "High exploration"
+    }
+  },
+  {
+    "experiment": 4,
+    "mean_reward": -17.666666666666668,
+    "std_reward": 1.8856180831641267,
+    "model_path": "cyiza_results\\exp_4\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.0001,
+      "gamma": 0.99,
+      "batch_size": 32,
+      "eps_start": 1.0,
+      "eps_end": 0.01,
+      "eps_decay": 50000.0,
+      "policy": "MlpPolicy",
+      "buffer_size": 20000,
+      "description": "Fast greedy collapse"
+    }
+  },
+  {
+    "experiment": 5,
+    "mean_reward": -15.666666666666666,
+    "std_reward": 2.0548046676563256,
+    "model_path": "cyiza_results\\exp_5\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.0002,
+      "gamma": 0.995,
+      "batch_size": 128,
+      "eps_start": 1.0,
+      "eps_end": 0.02,
+      "eps_decay": 300000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "Stable learner"
+    }
+  },
+  {
+    "experiment": 6,
+    "mean_reward": -3.3333333333333335,
+    "std_reward": 1.8856180831641267,
+    "model_path": "cyiza_results\\exp_6\\final_model.zip",
+    "hyperparameters": {
+      "lr": 0.00015,
+      "gamma": 0.97,
+      "batch_size": 8,
+      "eps_start": 1.0,
+      "eps_end": 0.05,
+      "eps_decay": 1000000.0,
+      "policy": "CnnPolicy",
+      "buffer_size": 20000,
+      "description": "Noisy small batch"
+    }
+  }
+]
