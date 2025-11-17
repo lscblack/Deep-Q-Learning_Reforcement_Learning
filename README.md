@@ -48,6 +48,23 @@ Total experiments: 10
 
 ---
 
+
+# Hyperparameter Experiments Log (10 Runs) – Member 3: Tamanda
+
+| # | Policy      | Hyperparameters                                                                 | Mean Reward | Noted Behavior |
+|---|-------------|----------------------------------------------------------------------------------|-------------|----------------|
+| 1 | MLPPolicy   | lr=2.5e-4, gamma=0.995, batch=32, epsilon_decay=2e5                              | -14.20      | Policy failure from pixel input. Requires CNN. |
+| 2 | CnnPolicy   | lr=3e-4, gamma=0.99, batch=32, epsilon_decay=7e5                                | 1.8         | Stable, high LR pushing limits; near-optimal performance. |
+| 3 | CnnPolicy   | lr=1e-3, gamma=0.95, batch=128, epsilon_decay=2e5                               | -10.50      | LR too high → instability + overshooting. |
+| 4 | CnnPolicy   | lr=5e-5, gamma=0.998, batch=32, epsilon_decay=1e6                               | 2.5         | Farsighted + slow; stable but slow convergence. |
+| 5 | CnnPolicy   | lr=2e-4, gamma=0.0, batch=64, epsilon_decay=1e5                                 | -1.0        | Myopic agent; only immediate reward → weak policy. |
+| 6 | CnnPolicy   | lr=2e-4, gamma=0.995, batch=16, epsilon_decay=2e5                               | 1.9         | Small batch → high noise + variance. |
+| 7 | CnnPolicy   | lr=2e-4, gamma=0.995, batch=128, epsilon_decay=2e5                              | 3.2         | Large batch → smooth + stable convergence (near-best). |
+| 8 | CnnPolicy   | lr=2.5e-4, gamma=0.995, batch=32, epsilon_decay=5e4                             | -4.0        | Exploration too fast → stuck in local optima. |
+| 9 | CnnPolicy   | lr=2.5e-4, gamma=0.995, batch=32, epsilon_decay=3e6                             | 0.5         | Exploration too slow → random for too long. |
+|10 | CnnPolicy   | lr=1e-4, gamma=0.99, batch=64, eps_start=0.5, eps_end=0.01, decay=2e5           | 2.0         | Low initial eps → less randomness, but risk of missing states. |
+
+
 ## Combined Analysis
 
 ### Key Findings:
