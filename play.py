@@ -1,40 +1,41 @@
-#!/usr/bin/env python3
-
 import gymnasium as gym
+import ale_py
+
 from stable_baselines3 import DQN
-import os
-import json
+from stable_baselines3.common.vec_env import DummyVecEnv, VecTransposeImage, VecFrameStack
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.atari_wrappers import AtariWrapper
 
 ENV_ID = "ALE/IceHockey-v5"
-RESULTS_DIR = "cyiza_results"
+MODEL_PATH = "cyiza_results/exp_1/final_model.zip"
 
+def register_ale():
+    gym.register_envs(ale_py)
 
-def find_best_model():
-    summary_path = os.path.join(RESULTS_DIR, "results_summary.json")
+def make_play_env(env_id):
+    env = gym.make(env_id, render_mode="human")
 
-    if not os.path.exists(summary_path):
-        raise FileNotFoundError("Training results_summary.json not found.")
+    env = Monitor(env)
+    try:
+        env = AtariWrapper(env)
+    except:
+        pass
 
-    with open(summary_path, "r") as f:
-        results = json.load(f)
+    venv = DummyVecEnv([lambda: env])
+    venv = VecTransposeImage(venv)
+    venv = VecFrameStack(venv, n_stack=4)
 
-    valid = [r for r in results if "mean_reward" in r]
-
-    if len(valid) == 0:
-        raise RuntimeError("No successful experiment with a saved model.")
-
-    best = max(valid, key=lambda x: x["mean_reward"])
-    return best["model_path"]
-
+    return venv
 
 def main():
-    model_path = find_best_model()
-    print("Loading best model:", model_path)
+    print(f"Loading best model: {MODEL_PATH}")
+    model = DQN.load(MODEL_PATH)
 
-    model = DQN.load(model_path)
+    register_ale()
 
-    env = gym.make(ENV_ID, render_mode="human")
+    env = make_play_env(ENV_ID)
     obs, _ = env.reset()
+
     total_reward = 0
 
     while True:
@@ -43,10 +44,9 @@ def main():
         total_reward += reward
 
         if terminated or truncated:
-            print("Episode reward:", total_reward)
+            print("Episode ended. Reward:", total_reward)
             obs, _ = env.reset()
             total_reward = 0
 
-
 if __name__ == "__main__":
-    main()
+    main
