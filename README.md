@@ -67,6 +67,26 @@ Total experiments: 10
 ** Findings (Tamanda's)
 My 10 experiments validated our architecture and optimized our parameters. The mandatory Policy Comparison (Exp 1) achieved only $\mathbf{-14.20}$ reward with $\text{MLPPolicy}$, confirming that $\text{CNNPolicy}$ was essential. Stress-testing extreme values revealed that a low Discount Factor ($\gamma=0.0$) caused non-strategic, myopic behavior, and a **high Learning Rate ($1\times 10^{-3}$) ** created severe instability. This process proved that the group's final choice—a high $\gamma$ and moderate $\text{lr}$ (e.g., $2\times 10^{-4}$)—is the necessary balance for stable, strategic success in the IceHockey environment.
 
+Member 4 : CYIZA Henriette
+Total experiments: 10
+
+### Experiment Results
+
+Metric/Hyperparameter	Value	Rationale/Observation				
+Experiment Name	Aggressive learner					
+Mean Reward	-2.33	The highest (closest to 0) reward achieved.				
+Standard Deviation	0.94	Low deviation suggests stable performance.				
+Learning Rate (lr)	0.0008	High: Enabled rapid learning within 60k timesteps.				
+Gamma (Discount)	0.9	Low: Prioritized immediate rewards, which is ideal for Ice Hockey gameplay.				
+Batch Size	64	Medium: Provided stable gradient estimates.				
+Epsilon Start	1	Standard starting exploration rate.				
+Epsilon End	0.02	Standard minimum exploration rate.				
+Epsilon Decay	50000	Fast: Quickly shifted the agent from exploration to exploitation.				
+Policy Type	CnnPolicy					
+Replay Buffer Size	20000					
+Model Path	cyiza_results\exp_1\final_model.zip					
+						
+
 ## Combined Analysis
 
 ### Key Findings:
