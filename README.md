@@ -2,6 +2,8 @@
 
 ## MEMBER 1: Nelly Iyabikoze
 
+**Video Presentation:** [Nelly's Video](https://youtu.be/gDJUlbZNDMI)
+
 ### Hyperparameter Set and Noted Behavior
 
 | Experiment | Hyperparameter Set | Noted Behavior |
