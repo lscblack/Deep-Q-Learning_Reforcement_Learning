@@ -64,6 +64,8 @@ Total experiments: 10
 | 9 | CnnPolicy   | lr=2.5e-4, gamma=0.995, batch=32, epsilon_decay=3e6                             | 0.5         | Exploration too slow → random for too long. |
 |10 | CnnPolicy   | lr=1e-4, gamma=0.99, batch=64, eps_start=0.5, eps_end=0.01, decay=2e5           | 2.0         | Low initial eps → less randomness, but risk of missing states. |
 
+** Findings (Tamanda's)
+My 10 experiments validated our architecture and optimized our parameters. The mandatory Policy Comparison (Exp 1) achieved only $\mathbf{-14.20}$ reward with $\text{MLPPolicy}$, confirming that $\text{CNNPolicy}$ was essential. Stress-testing extreme values revealed that a low Discount Factor ($\gamma=0.0$) caused non-strategic, myopic behavior, and a **high Learning Rate ($1\times 10^{-3}$) ** created severe instability. This process proved that the group's final choice—a high $\gamma$ and moderate $\text{lr}$ (e.g., $2\times 10^{-4}$)—is the necessary balance for stable, strategic success in the IceHockey environment.
 
 ## Combined Analysis
 
