@@ -72,19 +72,28 @@ Total experiments: 10
 
 ### Experiment Results
 
-Metric/Hyperparameter	Value	Rationale/Observation				
-Experiment Name	Aggressive learner					
-Mean Reward	-2.33	The highest (closest to 0) reward achieved.				
-Standard Deviation	0.94	Low deviation suggests stable performance.				
-Learning Rate (lr)	0.0008	High: Enabled rapid learning within 60k timesteps.				
-Gamma (Discount)	0.9	Low: Prioritized immediate rewards, which is ideal for Ice Hockey gameplay.				
-Batch Size	64	Medium: Provided stable gradient estimates.				
-Epsilon Start	1	Standard starting exploration rate.				
-Epsilon End	0.02	Standard minimum exploration rate.				
-Epsilon Decay	50000	Fast: Quickly shifted the agent from exploration to exploitation.				
-Policy Type	CnnPolicy					
-Replay Buffer Size	20000					
-Model Path	cyiza_results\exp_1\final_model.zip					
+Rank	Exp	Mean Reward	Std Reward	Description	Hyperparameters
+1	1	-2.33	0.94	Aggressive learner	lr=0.0008, gamma=0.9, batch=64, eps_start=1.0, eps_end=0.02, eps_decay=50000
+2	6	-3.33	1.89	Noisy small batch	lr=0.00015, gamma=0.97, batch=8, eps_start=1.0, eps_end=0.05, eps_decay=1000000
+3	2	-12.33	12.55	Conservative slow learner	lr=5e-06, gamma=0.999, batch=32, eps_start=1.0, eps_end=0.05, eps_decay=800000
+4	7	-13.67	3.3	Long exploration slow decay	lr=0.0005, gamma=0.99, batch=64, eps_start=1.0, eps_end=0.01, eps_decay=2000000
+5	5	-15.67	2.05	Stable learner	lr=0.0002, gamma=0.995, batch=128, eps_start=1.0, eps_end=0.02, eps_decay=300000
+6	3	-16.33	2.36	High exploration	lr=0.0003, gamma=0.98, batch=64, eps_start=1.0, eps_end=0.2, eps_decay=100000
+7	4	-17.67	1.89	Fast greedy collapse	lr=0.0001, gamma=0.99, batch=32, eps_start=1.0, eps_end=0.01, eps_decay=50000
+
+Experiment Name	Aggressive learner		
+Mean Reward	-2.33	The highest (closest to 0) reward achieved.	
+Standard Deviation	0.94	Low deviation suggests stable performance.	
+Learning Rate (lr)	0.0008	High: Enabled rapid learning within 60k timesteps.	
+Gamma (Discount)	0.9	Low: Prioritized immediate rewards, which is ideal for Ice Hockey gameplay.	
+Batch Size	64	Medium: Provided stable gradient estimates.	
+Epsilon Start	1	Standard starting exploration rate.	
+Epsilon End	0.02	Standard minimum exploration rate.	
+Epsilon Decay	50000	Fast: Quickly shifted the agent from exploration to exploitation.	
+Policy Type	CnnPolicy		
+Replay Buffer Size	20000		
+Model Path	cyiza_results\exp_1\final_model.zip		
+			
 						
 
 ## Combined Analysis
