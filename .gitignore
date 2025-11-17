@@ -1,0 +1,4 @@
+__pycache__
+venv/
+.env
+loue_sauveur_christian_expeirements/generate_readme.py
