@@ -1,0 +1,10 @@
+[
+  {
+    "exp": "exp_1_MlpPolicy_lr0.00025_g0.995_b32",
+    "mean_reward": -14.6,
+    "std_reward": 0.48989794855663565,
+    "timesteps": 200000,
+    "elapsed_s": 6294.0029237270355,
+    "model_path": "dqn_atari_results/dqn_model_exp_1_MlpPolicy_lr0.00025_g0.995_b32.zip"
+  }
+]
