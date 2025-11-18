@@ -68,6 +68,7 @@ Total experiments: 10
 My 10 experiments validated our architecture and optimized our parameters. The mandatory Policy Comparison (Exp 1) achieved only $\mathbf{-14.20}$ reward with $\text{MLPPolicy}$, confirming that $\text{CNNPolicy}$ was essential. Stress-testing extreme values revealed that a low Discount Factor ($\gamma=0.0$) caused non-strategic, myopic behavior, and a **high Learning Rate ($1\times 10^{-3}$) ** created severe instability. This process proved that the group's final choice—a high $\gamma$ and moderate $\text{lr}$ (e.g., $2\times 10^{-4}$)—is the necessary balance for stable, strategic success in the IceHockey environment.
 
 Member 4 : CYIZA Henriette
+Video Presentation: https://www.loom.com/share/5412aad1e9894ea9a879329bb25edc36
 Total experiments: 10
 
 ### Experiment Results
