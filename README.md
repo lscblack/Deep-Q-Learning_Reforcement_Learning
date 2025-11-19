@@ -1,5 +1,3 @@
-Perfect! I can rewrite the **README** to match your exact project structure. Here's a ready-to-use version:
-
 ```markdown
 ## Project Overview
 In this assignment, we implemented a Deep Q-Network (DQN) agent using **Stable Baselines 3** and **Gymnasium** to train the agent to play an Atari game. We experimented with multiple hyperparameters and policy types (MLPPolicy and CNNPolicy) to observe their effects on learning performance. After training, we evaluated the agent using `play.py` and recorded its performance in real-time.
@@ -16,8 +14,6 @@ Required Python packages:
 - stable-baselines3
 - ale-py
 - AutoROM
-- numpy
-- pandas
 
 ---
 
@@ -97,8 +93,20 @@ python play.py
 | lr=0.0001, gamma=0.99, batch=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1  | Good (Learned basics)               |
 | lr=0.0001, gamma=0.99, batch=32, epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.1  | Great Performance! (Champion Model) |
 
-> Other members will add their hyperparameter tables below in the same format.
+### Loue Sauveur Christian - Experiments
 
+
+
+
+
+### Tamanda Lynn Thumba Kaunda - Experiments
+
+
+
+
+
+
+### Henriette Cyiza - Experiments
 ---
 
 ## Observations
@@ -110,15 +118,7 @@ python play.py
 
 ---
 
-## Submission
 
-* Include both `train.py` and `play.py`.
-* Include the `dqn_model.zip` file.
-* Include the `results/` folder with logs and tables.
-* Record a short video of the agent playing Breakout-v5 for presentation.
-* Add your hyperparameter tables and commentary for each member.
-
----
 
 ## Video Demonstration
 
@@ -135,5 +135,6 @@ python play.py
 * [AutoROM](https://github.com/mgbellemare/AutoROM)
 
 ```
+
 
 
