@@ -1,0 +1,5 @@
+cyiza_results/**/final_model.zip filter=lfs diff=lfs merge=lfs
+*.zip filter=lfs diff=lfs merge=lfs
+*.bin filter=lfs diff=lfs merge=lfs
+*.pkl filter=lfs diff=lfs merge=lfs
+cyiza_results/*/final_model.zip filter=lfs diff=lfs merge=lfs -text
