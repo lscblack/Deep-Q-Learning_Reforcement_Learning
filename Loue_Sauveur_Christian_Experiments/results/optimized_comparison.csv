@@ -1,0 +1,11 @@
+Exp ID,Focus,Timesteps,LR,Batch,Buffer,Mean Reward,Std Reward,Auto-Comment
+1,Micro Sprint 1,10000,0.001,16,5000,8.4,2.33,Average.
+2,Micro Sprint 2,15000,0.0009,24,7500,8.2,0.98,Average.
+3,Micro Sprint 3,20000,0.0008,32,10000,14.8,4.12,Good (Learned basics).
+4,Micro Sprint 4,25000,0.0007,40,12500,12.2,2.04,Good (Learned basics).
+5,Micro Sprint 5,30000,0.0006,48,15000,17.0,4.65,Great Performance!
+6,Micro Sprint 6,35000,0.0005,64,17500,18.4,3.32,Great Performance!
+7,Micro Sprint 7,40000,0.0004,96,50000,15.4,3.32,Great Performance!
+8,Micro Sprint 8,55000,0.0003,128,22500,21.0,5.73,Great Performance!
+9,Micro Sprint 9,60000,0.0002,256,25000,19.8,1.94,Great Performance!
+10,Micro Sprint 10,70000,0.0001,512,30000,14.6,2.87,Good (Learned basics).

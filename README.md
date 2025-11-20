@@ -86,11 +86,29 @@ project_root/
 
 
 
+### Loue Sauveur Christian - Experiments
 
-### Loue Sauveur Christian - Experiments  
+| Experiment | Focus / Policy        | Timesteps | LR     | Batch | Buffer | Gamma | Epsilon Start | Epsilon End | Epsilon Decay | Mean Reward | Std Reward | Noted Behavior                        |
+| ---------- | --------------------- | --------- | ------ | ----- | ------ | ----- | ------------- | ----------- | ------------- | ----------- | ---------- | ------------------------------------- |
+| 1          | Micro Sprint 1 / CNN  | 10000     | 0.001  | 16    | 5000   | 0.90  | 1.0           | 0.1         | 0.5           | 8.4         | 2.33       | Average                               |
+| 2          | Micro Sprint 2 / CNN  | 15000     | 0.0009 | 24    | 7500   | 0.91  | 0.95          | 0.09        | 0.45          | 8.2         | 0.98       | Average                               |
+| 3          | Micro Sprint 3 / CNN  | 20000     | 0.0008 | 32    | 10000  | 0.92  | 0.9           | 0.08        | 0.4           | 14.8        | 4.12       | Good (Learned basics)                 |
+| 4          | Micro Sprint 4 / CNN  | 25000     | 0.0007 | 40    | 12500  | 0.93  | 0.85          | 0.07        | 0.35          | 12.2        | 2.04       | Good (Learned basics)                 |
+| 5          | Micro Sprint 5 / CNN  | 30000     | 0.0006 | 48    | 15000  | 0.94  | 0.8           | 0.06        | 0.3           | 17.0        | 4.65       | Great Performance!                    |
+| 6          | Micro Sprint 6 / CNN  | 35000     | 0.0005 | 64    | 17500  | 0.95  | 1.0           | 0.05        | 0.25          | 18.4        | 3.32       | Great Performance!                    |
+| 7          | Micro Sprint 7 / CNN  | 40000     | 0.0004 | 96    | 50000  | 0.96  | 1.0           | 0.04        | 0.2           | 15.4        | 3.32       | Great Performance!                    |
+| 8          | Micro Sprint 8 / CNN  | 55000     | 0.0003 | 128   | 22500  | 0.97  | 1.0           | 0.03        | 0.15          | 21.0        | 5.73       | Great Performance!                    |
+| 9          | Micro Sprint 9 / CNN  | 60000     | 0.0002 | 256   | 25000  | 0.98  | 1.0           | 0.02        | 0.1           | 19.8        | 1.94       | **Best balance (High mean, low std)** |
+| 10         | Micro Sprint 10 / CNN | 70000     | 0.0001 | 512   | 30000  | 0.99  | 1.0           | 0.01        | 0.1           | 14.6        | 2.87       | Good (Learned basics)                 |
 
+**Key Observations:**
 
-
+* **Best model:** Experiment 9, combining **high mean reward (19.8)** with **lowest standard deviation (1.94)** among top performers.
+* **Batch size & buffer:** Larger values increased stability and reduced variance.
+* **Gamma:** High gamma (0.98) favored long-term rewards.
+* **LR:** Moderate learning rates (0.0003–0.0005) gave best learning speed and performance.
+* **CNNPolicy:** Crucial for pixel-based Atari environments; MLPPolicy showed poor performance.
+* **Epsilon decay:** Balanced exploration and exploitation; too fast decay reduced learning.
 
 
 ### Tamanda Lynn Thumba Kaunda - Experiments  
