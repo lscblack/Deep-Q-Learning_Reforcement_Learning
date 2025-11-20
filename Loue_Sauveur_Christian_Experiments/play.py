@@ -71,7 +71,7 @@ def main():
     # 1. Find Best ID
     try:
         best_id = get_best_experiment_id(CSV_PATH)
-        model_path = MODEL_DIR_PATTERN.format(9)
+        model_path = MODEL_DIR_PATTERN.format(best_id)
     except Exception as e:
         print(f"❌ Error reading CSV: {e}")
         return
