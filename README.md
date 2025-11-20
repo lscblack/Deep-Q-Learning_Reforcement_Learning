@@ -113,9 +113,24 @@ project_root/
 
 * **High timesteps**, proper epsilon decay, and large buffers amplify CNN performance; MLP only benefits marginally.
 
-### Tamanda Lynn Thumba Kaunda - Experiments  
+### Tamanda Lynn Thumba Kaunda - Experiments 
+Video Link: https://youtu.be/3r9agr-D5K8?si=OA5ojzfzn0HLMrIY
 
+| Exp ID | Focus                         | Timesteps | LR      | Gamma | Batch | Buffer | Learn Starts | Target Update | Eps Decay | Mean Reward | Std Reward |
+|-------|-------------------------------|-----------|---------|-------|-------|--------|--------------|----------------|-----------|-------------|------------|
+| 1     | Baseline Short (quick-check)  | 5000      | 0.0001  | 0.99  | 64    | 5000   | 1000         | 1000           | 0.2       | 3.2         | 0.75       |
+| 2     | Optimized Fast (Exp6-tuned)   | 5000      | 0.0003  | 0.95  | 32    | 10000  | 1000         | 1000           | 0.1       | 7.6         | 1.50       |
+| 3     | Longer Stable (50k)           | 150000    | 0.0001  | 0.90  | 32    | 50000  | 5000         | 1000           | 0.2       | 21.6        | 7.28       |
+| 4     | Aggressive Start (MLP test)   | 5000      | 0.0002  | 0.99  | 64    | 100000 | 500          | 1000           | 0.1       | 2.8         | 0.40       |
+| 5     | Mid Stable (20k)              | 20000     | 0.00015 | 0.96  | 32    | 20000  | 2000         | 1000           | 0.15      | 10.0        | 2.90       |
+| 6     | High Gamma Long Horizon       | 40000     | 0.0001  | 0.995 | 32    | 40000  | 2000         | 2000           | 0.2       | 7.6         | 1.50       |
+| 7     | Short Buffer Fast Decay       | 10000     | 0.0002  | 0.97  | 64    | 5000   | 1000         | 1000           | 0.5       | 6.8         | 4.07       |
+| 8     | Delayed Target Update (5k)    | 15000     | 0.0001  | 0.99  | 32    | 10000  | 1000         | 5000           | 0.1       | 4.2         | 1.94       |
+| 9     | Balanced Optimizer            | 20000     | 0.00015 | 0.995 | 32    | 20000  | 1000         | 1000           | 0.15      | 8.0         | 4.05       |
+| 10    | Fastest Decay (0.5)           | 5000      | 0.0001  | 0.99  | 64    | 50000  | 1000         | 1000           | 0.5       | 0.0         | 0.00       |
 
+## key Results
+The highest-performing configuration was the 150k-step training run (Exp 3), achieving a mean reward of 21.6. This reinforces the importance of extended training horizons, large replay buffers, and a carefully-paced exploration schedule for Atari environments. Short runs (5k–20k) consistently underperformed, confirming that Breakout requires substantial interaction data for stable learning.
 
 
 
@@ -166,6 +181,7 @@ video link: https://www.loom.com/share/3c445b6aa90b42cfa046c002a4743699
 * AutoROM: https://github.com/mgbellemare/AutoROM  
 
 ---
+
 
 
 
