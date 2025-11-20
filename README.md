@@ -84,6 +84,9 @@ project_root/
 | 9      | lr=0.001, gamma=0.95, batch=128, epsilon_start=0.95, epsilon_end=0.1, epsilon_decay=0.2   | 18.8       | 7.78       | Great Performance!      |
 | 10     | lr=0.002, gamma=0.99, batch=32, epsilon_start=1.0, epsilon_end=0.05, epsilon_decay=0.1    | 5.2        | 3.87       | Average.                |
 
+**Video https://youtu.be/uxuf6Gv_Sd0**
+
+
 **Hyperparameter Tuning Results**
 
 The DQN agent was trained with 10 different hyperparameter combinations, as shown in the table above. Key observations include:
@@ -195,6 +198,7 @@ video link: https://www.loom.com/share/3c445b6aa90b42cfa046c002a4743699
 * AutoROM: https://github.com/mgbellemare/AutoROM  
 
 ---
+
 
 
 
