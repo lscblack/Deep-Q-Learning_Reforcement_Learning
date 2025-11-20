@@ -101,6 +101,21 @@ project_root/
 
 ### Henriette Cyiza - Experiments  
 
+   Table of Hyperparameters and Noted Behavior
+
+| Experiment | Hyperparameters (Simplified)                                  | Noted Behavior                                                      |
+| ---------- | ------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **1**      | lr=0.0008, γ=0.90, batch=64, eps_end=0.02, decay=50k, CNN     | **Very strong** (18.3 avg) — aggressive learner helped early reward |
+| **2**      | lr=0.000005, γ=0.999, batch=32, eps_end=0.05, decay=800k, CNN | **Underperformed** — extremely slow learning                        |
+| **3**      | lr=0.0003, γ=0.98, batch=64, eps_end=0.2, decay=100k, CNN     | **Very strong** (18.7 avg) — high exploration helped                |
+| **4**      | lr=0.0001, γ=0.99, batch=32, eps_end=0.01, decay=50k, **MLP** | **Weak** — MLP cannot extract pixel features                        |
+| **5**      | lr=0.0002, γ=0.995, batch=128, eps_end=0.02, decay=300k, CNN  | **Strong** — stable learner with large batch                        |
+| **6**      | lr=0.00015, γ=0.97, batch=8, eps_end=0.05, decay=1M, CNN      | **Moderate** — noisy due to tiny batch                              |
+| **7**      | lr=0.0005, γ=0.99, batch=64, eps_end=0.01, decay=2M, CNN      | **BEST Overall (21.3 avg)** — long exploration gave best mastery    |
+| **8**      | lr=0.0001, γ=0.96, batch=64, eps_end=0.02, decay=80k, **MLP** | **Weak** — MLP limitation visible                                   |
+| **9**      | lr=0.0003, γ=0.999, batch=64, eps_end=0.01, decay=400k, CNN   | **Strong** — long horizon γ=0.999 helped                            |
+| **10**     | lr=0.0002, γ=0.92, batch=32, eps_end=0.05, decay=50k, **MLP** | **Weak** — low gamma + MLP = shallow learning                       |
+
 
 
 ---
@@ -129,4 +144,5 @@ project_root/
 * AutoROM: https://github.com/mgbellemare/AutoROM  
 
 ---
+
 
