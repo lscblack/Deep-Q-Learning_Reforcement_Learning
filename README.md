@@ -101,6 +101,8 @@ project_root/
 
 ### Henriette Cyiza - Experiments  
 
+video link: https://www.loom.com/share/3c445b6aa90b42cfa046c002a4743699
+
    Table of Hyperparameters and Noted Behavior
 
 | Experiment | Hyperparameters (Simplified)                                  | Noted Behavior                                                      |
@@ -144,5 +146,6 @@ project_root/
 * AutoROM: https://github.com/mgbellemare/AutoROM  
 
 ---
+
 
 
