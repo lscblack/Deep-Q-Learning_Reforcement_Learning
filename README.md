@@ -129,6 +129,7 @@ The DQN agent was trained with 10 different hyperparameter combinations, as show
 * **MLPPolicy** fails to capture environment complexity, leading to low mean rewards even with long training.
 
 * **High timesteps**, proper epsilon decay, and large buffers amplify CNN performance; MLP only benefits marginally.
+* link to video : https://drive.google.com/file/d/1m8EnpmexLTi7td93bZboblrxBZ5DI1ym/view?usp=sharing
 
 ### Tamanda Lynn Thumba Kaunda - Experiments 
 Video Link: https://youtu.be/3r9agr-D5K8?si=OA5ojzfzn0HLMrIY
@@ -198,6 +199,7 @@ video link: https://www.loom.com/share/3c445b6aa90b42cfa046c002a4743699
 * AutoROM: https://github.com/mgbellemare/AutoROM  
 
 ---
+
 
 
 
